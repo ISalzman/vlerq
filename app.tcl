@@ -1,4 +1,4 @@
-#!/usr/bin/env tclkit85
+#!/usr/bin/env jeemon
 # main application startup script
 
 proc tclLog {msg} { Log: {$msg} }
