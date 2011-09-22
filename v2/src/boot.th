@@ -1,7 +1,0 @@
-\ boot.th -=- starkit bootstrap
-
-\ s? "In boot.th\n" .p
-Exe 2 ^at 'words2.th findez eval
-\ s? "Still in boot.th\n" .p
-{ Exe 2 ^at 'main.th findez dup nil? if drop else eval then } exec
-\ s? "Back in boot.th\n" .p

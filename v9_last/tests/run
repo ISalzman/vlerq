@@ -1,9 +1,0 @@
-#!/usr/bin/env lua
-
-package.path = 'etc/?.lua;' .. package.path
-package.cpath = 'src/?.so;' .. package.cpath
-
-require 'lunit'
-require 'lunit-console'
-
-lunit.main({...})

@@ -1,6 +1,0 @@
-if [ -f ../src/Makefile.in ]; then
-    cp ../src/Makefile.in Makefile
-    cp ../src/pkgIndex.tcl.in pkgIndex.tcl
-else
-    echo "must be run as 'sh ../configure' from inside the build directory"
-fi

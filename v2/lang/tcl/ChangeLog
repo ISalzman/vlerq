@@ -1,4 +1,0 @@
-2005-09-29  Jean-Claude Wippler  <jcw@equi4.com>
-
-	* thrive.c: Initial version.
-	This package is based on the Tcl sampleextension

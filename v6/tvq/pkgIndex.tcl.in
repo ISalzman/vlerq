@@ -1,6 +1,0 @@
-package ifneeded tvq @PACKAGE_VERSION@ \
-    [list load [file join $dir lib@PACKAGE_NAME@@PACKAGE_VERSION@[info sharedlibext]] tvq]
-package ifneeded ratcl @PACKAGE_VERSION@ \
-    [list source [file join $dir library/ratcl.tcl]]
-package ifneeded vfs::mkcl 1.6 \
-    [list source [file join $dir library/mkclvfs.tcl]]

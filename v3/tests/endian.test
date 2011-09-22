@@ -1,9 +1,0 @@
-#!/usr/bin/env tclkit
-# tests with a file which has the opposite byte order
-
-switch $tcl_platform(byteOrder) {
-  littleEndian { set testfile l.kit-be }
-  bigEndian { set testfile l.kit }
-}
-
-source [file dirname [info script]]/basic.test
