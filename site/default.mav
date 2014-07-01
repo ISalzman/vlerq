@@ -1,9 +1,0 @@
-<html>
-  <head>
-    <title>Welcome - [pwd]</title>
-  </head>
-  <body>
-    <p><a href='/i/index.html'>Info area</a></p>
-    <p><a href='/t/index.html'>Test area</a></p>
-  </body>
-</html>

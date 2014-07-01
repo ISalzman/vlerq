@@ -1,9 +1,0 @@
-%# documentation browser
-
-<style type="text/css">
-  #main { font: 11px/16px Verdana; width: 550px; }
-</style>
-
-<div id='main'>
-	[Wikify render [Rig readfile [Rig home]/docs/[file tail [REQ url]]]]
-</div>
