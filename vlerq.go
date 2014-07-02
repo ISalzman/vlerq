@@ -2,10 +2,17 @@ package vlerq
 
 var metaMeta, emptyMeta = setupSpecialViews()
 
+const (
+	AnyType = iota
+	IntType
+	StringType
+	ViewType
+)
+
 type View struct {
 	rows uint32
-	keys uint8
-	uniq uint8
+	// keys uint8
+	// uniq uint8
 	meta *View
 	data []Column
 }
@@ -25,7 +32,7 @@ func (v *View) Rows() int {
 }
 
 func (v *View) Cols() int {
-	return v.meta.Rows()
+	return int(v.meta.rows)
 }
 
 func (v *View) Meta() *View {
@@ -70,21 +77,13 @@ func (c ViewColumn) Set(i int, v interface{}) {
 func setupSpecialViews() (mmv, emv *View) {
 	emv = &View{
 		rows: 0,
-		keys: 1,
-		uniq: 1,
-		data: []Column{
-			StringColumn{},
-			StringColumn{},
-			ViewColumn{},
-		},
+		data: []Column{StringColumn{}, IntColumn{}, ViewColumn{}},
 	}
 	mmv = &View{
 		rows: 3,
-		keys: 1,
-		uniq: 1,
 		data: []Column{
 			StringColumn{"name", "type", "subv"},
-			StringColumn{"S", "S", "V"},
+			IntColumn{StringType, IntType, ViewType},
 			ViewColumn{emv, emv, emv},
 		},
 	}
